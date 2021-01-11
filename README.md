@@ -7,7 +7,7 @@
 ## Brief
 For this project I have been assigned to create a portfolio website for future job opportunities
 
-## Programming languages and frameworks being used:
+## Programming languages and frameworks:
 - HTML5
 - SASS
 - JavaScript (Vanilla)
@@ -16,4 +16,4 @@ For this project I have been assigned to create a portfolio website for future j
 
 
 ## Live Website
-[www.tonnessen.com(https://www.tonnessen.com/)]
+https://www.tonnessen.com/
