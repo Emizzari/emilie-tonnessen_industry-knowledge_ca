@@ -1,0 +1,46 @@
+.btn{
+    border-radius: 0;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    //letter-spacing: 1px;
+
+    // Colors:
+    &--primary{
+        background: colors(primary);
+        color: #FFF;
+
+        &:hover{
+            background: colors(primary, light);
+            color: #FFF;
+        }
+    }
+
+    &--secondary{
+        background: colors(secondary);
+        color: #000;
+
+        &:hover{
+            background: colors(secondary, dark);
+            color: #000;
+        }
+    }
+
+    &--tertiary{
+        background: colors(tertiary);
+        color: #FFF;
+
+        &:hover{
+            background: colors(tertiary, light);
+            color: #FFF;
+        }
+    }
+
+    // Sizes:
+    &--cta{
+        padding: 15px 50px;
+        margin: 0;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+}
