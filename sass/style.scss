@@ -1,8 +1,12 @@
 // Basics
-@import "./basics/";
+@import "./basics/layout";
+@import "./basics/colors";
+@import "./basics/typography";
 
 // Constants
-@import "./constants/";
+@import "./constants/nav";
+@import "./constants/footer";
+@import "./constants/header";
 
 // Components
-@import "./components/";
+@import "./components/hero";
