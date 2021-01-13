@@ -32,4 +32,45 @@ img, iframe,
     padding: 0;
     box-sizing: border-box;
 }
+
+a{
+    text-decoration: none;
+}
 /* ---------------------------------------------- */
+
+.body--primary{
+    background: colors(primary);
+    color: #FFF;
+}
+
+.body--secondary{
+    background: colors(secondary);
+    color: #000;
+}
+
+.body--tertiary{
+    background: colors(tertiary);
+    color: #FFF;
+}
+
+.container{
+    position: relative;
+}
+
+// Sections:
+.section{
+    padding: 200px 0;
+    height: 110vh;
+
+    &--primary{
+        background: colors(primary);
+    }
+
+    &--secondary{
+        background: colors(secondary);
+    }
+
+    &--tertiary{
+        background: colors(tertiary);
+    }
+}
