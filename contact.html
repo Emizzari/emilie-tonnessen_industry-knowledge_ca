@@ -93,17 +93,51 @@
                     </div>
 
                     <!-- Contact Form: -->
-                    <form action="GET" class="col-5 contact-form">
-                        <div>
-                            <label for=""></label>
-                            <input type="text">
-                            <div>
-                                error
+                    <form action="contact-form-handler.php" method="post" id="contact-form" class="col-6 row contact-form">
+
+                        <!-- Name: -->
+                        <section class="col-12 contact-form__section">
+                            <!-- <label for="name" class="contact-form__label">Name: </label> -->
+                            <input id="name" class="contact-form__input" placeholder="Name" type="text">
+                            <div class="contact-form__error contact-form__error--name">
+                                <i class="fal fa-exclamation-triangle"></i> Please enter your name
                             </div>
+                        </section>
+
+                        <!-- Email: -->
+                        <section class="col-12 contact-form__section">
+                            <!-- <label for="name" class="contact-form__label">Email: </label> -->
+                            <input id="name" class="contact-form__input" placeholder="Email" type="text">
+                            <div class="contact-form__error contact-form__error--email">
+                                <i class="fal fa-exclamation-triangle"></i> Please a valid email address
+                            </div>
+                        </section>
+
+                        <!-- Topic: -->
+                        <section class="col-12 contact-form__section">
+                            <!-- <label for="name" class="contact-form__label">Topic: </label> -->
+                            <input id="name" class="contact-form__input" placeholder="Topic" type="text">
+                            <div class="contact-form__error contact-form__error--topic">
+                                <i class="fal fa-exclamation-triangle"></i> Please enter a topic
+                            </div>
+                        </section>
+
+                        <!-- Message -->
+                        <section class="col-12 contact-form__section">
+                            <!-- <label for="name" class="contact-form__label">Topic: </label> -->
+                            <textarea id="name" class="contact-form__textarea" placeholder="Message" type="text"></textarea>
+
+                            <div class="contact-form__error contact-form__error--message">
+                                <i class="fal fa-exclamation-triangle"></i> Please enter a message longer than 6 letters
+                            </div>
+                        </section>
+
+
+
+                        <!-- Submit Button: -->
+                        <div class="col-12 contact-form__section">
+                            <input name="submit" type="submit" class="form-control submit contact-form__submit btn btn--primary" value="SEND">
                         </div>
-
-
-
                     </form>
                 </div>
             </div>
