@@ -60,8 +60,9 @@ a{
 // Sections:
 .section{
     padding: 200px 0;
-    height: 110vh;
+    min-height: 110vh;
 
+    // Background color
     &--primary{
         background: colors(primary);
     }
@@ -72,5 +73,15 @@ a{
 
     &--tertiary{
         background: colors(tertiary);
+    }
+
+    //Headlines
+    &__headline{
+        font-size: clamp(30px, 10vw, 100px);
+        text-align: center;
+
+        &--lg{
+            font-size: clamp(40px, 10vw, 140px);
+        }
     }
 }
