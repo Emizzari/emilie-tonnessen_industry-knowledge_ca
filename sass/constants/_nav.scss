@@ -2,36 +2,61 @@
     z-index: 99;
     position: relative;
     width: 100%;
+    margin-bottom: 100px;
+
+    &__container{
+        position: relative;
+    }
 
     &__brand{
-        z-index: 1;
-        position: relative;
-        font-size: 200px;
-        text-transform: uppercase;
-        font-family: fieldwork-hum, sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        text-decoration: none;
-        color: white;
-        margin: 10px;
+            z-index: 1;
+            position: relative;
+            color: colors(primary);
+            text-transform: uppercase;
+            font-family: fieldwork-hum, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-decoration: none;
+            font-size: 100px; 
 
-        &:hover{
+            &:hover{
+                color: colors(primary);
+            }
+
+        &--landingpage{
+            font-size: 200px; 
             color: white;
-        }
 
+            &:hover{
+                color: white;
+            }
+        }
+        
         &__first-name{
-            line-height: 200px;
             position: absolute;
+            line-height: 100px;
+
+            &--landingpage{
+                line-height: 200px;
+            }
+            
         }
 
         &__last-name{
             position: absolute;
-            top: 200px;
-            line-height: 200px;
-            background: -webkit-linear-gradient(#FFF, colors(primary));
+            line-height: 100px;
+            background: -webkit-linear-gradient( colors(primary), #FFF);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            top: 90px;
+            left: 60px;
+
+            &--landingpage{
+                line-height: 200px;
+                top: 200px;
+                background: -webkit-linear-gradient(#FFF, colors(primary));
+            }
         }
     }
 
@@ -41,6 +66,10 @@
         color: white;
         list-style: none;
         line-height: 10vh;
+
+        &--dark{
+            color: colors(tertiary);
+        }
     }
 
     &__link{
@@ -58,6 +87,18 @@
         &:hover{
             color: colors(secondary);
         }
+
+        &--dark{
+            color: colors(tertiary);
+
+            &:hover{
+                color: colors(primary);
+            }
+        }
+
+        &--active{
+            color: colors(primary);
+        }
     }
 
     &__decor{
@@ -68,9 +109,14 @@
             height: 150px;
             position: absolute;
             top: 0px;
-            right: -20px;
+            right: -30px;
             border-top: 1px solid rgba(255, 255, 255, 0.5);
             border-right: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        &--dark div{
+            border-top: 1px solid rgba(0, 0, 0, 0.5);
+            border-right: 1px solid rgba(0, 0, 0, 0.5);
         }
     }
 }
