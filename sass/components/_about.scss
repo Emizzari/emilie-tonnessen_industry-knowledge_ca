@@ -1,0 +1,66 @@
+.profile-img{
+    height: 700px;
+    width: 100%;
+    background-image: url("../../graphics/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 0;;
+}
+
+.about{
+
+    &__headline{
+        font-weight: 700;
+        font-size: clamp(30px, 5vw, 50px);
+    }
+
+    &__interests{
+        display: flex;
+        flex-direction: row;
+
+        &__tag{
+            background: colors(secondary);
+            color: colors(tertiary);
+            padding: 5px 10px;
+            margin-right: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+    }
+
+    &__desc{
+        padding: 25px;
+
+        & p{
+            padding: 15px 0;
+        }
+    }
+
+    &__profile{
+        padding: 25px;
+    }
+
+    &__buttons{
+        margin: 30px 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__skills{
+        background: linear-gradient(90deg, #188CD9, #164582);
+
+        &__container{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px 0;
+
+            & i{
+                font-size: 50px;
+                color: rgba(255, 255, 255, 0.7)
+            }
+        }
+    }
+}
