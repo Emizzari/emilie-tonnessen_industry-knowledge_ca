@@ -9,15 +9,15 @@
     }
 
     &__brand{
-            z-index: 1;
-            position: relative;
-            color: colors(primary);
-            text-transform: uppercase;
-            font-family: fieldwork-hum, sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            text-decoration: none;
-            font-size: 100px; 
+        z-index: 1;
+        position: relative;
+        color: colors(primary);
+        text-transform: uppercase;
+        font-family: fieldwork-hum, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-size: 100px; 
 
             &:hover{
                 color: colors(primary);
@@ -37,6 +37,7 @@
             line-height: 100px;
 
             &--landingpage{
+                position: absolute;
                 line-height: 200px;
             }
             
@@ -53,9 +54,15 @@
             left: 60px;
 
             &--landingpage{
+                position: absolute;
+                top: 100px;
+                left: 60px;
                 line-height: 200px;
                 top: 200px;
                 background: -webkit-linear-gradient(#FFF, colors(primary));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }
