@@ -163,6 +163,7 @@ a {
 }
 
 .nav__brand__first-name--landingpage {
+  position: absolute;
   line-height: 200px;
 }
 
@@ -178,9 +179,15 @@ a {
 }
 
 .nav__brand__last-name--landingpage {
+  position: absolute;
+  top: 100px;
+  left: 60px;
   line-height: 200px;
   top: 200px;
   background: -webkit-linear-gradient(#FFF, #00629B);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav__list {
