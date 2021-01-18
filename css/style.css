@@ -399,6 +399,18 @@ a {
   font-size: 20px;
 }
 
+.btn--md {
+  padding: 10px 35px;
+  margin: 0;
+  font-size: 20px;
+}
+
+.btn--sm {
+  padding: 5px 15px;
+  margin: 0;
+  font-size: 16px;
+}
+
 .btn--github {
   background: #6e42c1;
   color: #FFF;
@@ -760,10 +772,62 @@ a {
   margin-bottom: 150px;
 }
 
-.portfolio__container {
+.portfolio__card {
+  padding: 0 15px;
+  position: relative;
+}
+
+.portfolio__card__container {
+  -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05), 0 5px 15px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05), 0 5px 15px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transition: ease box-shadow 0.3s;
+  transition: ease box-shadow 0.3s;
+}
+
+.portfolio__card__container:hover {
+  -webkit-box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.07), 0 5px 25px 0 rgba(0, 0, 0, 0.07);
+          box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.07), 0 5px 25px 0 rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+}
+
+.portfolio__card__thumbnail {
+  width: 100%;
+}
+
+.portfolio__card__content {
+  padding: 15px;
+}
+
+.portfolio__card__title {
+  font-weight: 600;
+  font-size: clamp(18px, 5vw, 20px);
+  margin-bottom: 5px;
+}
+
+.portfolio__card__description {
+  font-size: clamp(13px, 2vw, 16px);
+  margin-bottom: 20px;
+}
+
+.portfolio__card__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.portfolio__card__buttons a, .portfolio__card__buttons button {
+  width: 100%;
+}
+
+.portfolio__card__buttons a:first-child {
+  margin-right: 20px;
 }
 
 /*
@@ -781,7 +845,6 @@ a {
   margin: 50px 0;
   max-width: 380px;
   width: 380px;
-  height: 480px;
   -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.02), 0 5px 15px 0 rgba(0, 0, 0, 0.02);
           box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.02), 0 5px 15px 0 rgba(0, 0, 0, 0.02);
   -webkit-transition: ease box-shadow 0.3s;
@@ -808,23 +871,6 @@ a {
 .skeleton__thumbnail.thumbnail {
   max-width: 100%;
   height: auto;
-}
-
-.skeleton__tags {
-  margin-bottom: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.skeleton__tags div {
-  height: 25px;
-  width: 90px;
-  margin-right: 15px;
 }
 
 .skeleton__headline.skeleton__loading {
