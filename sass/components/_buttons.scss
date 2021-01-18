@@ -50,6 +50,18 @@
         font-size: 20px;
     }
 
+    &--md{
+        padding: 10px 35px;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    &--sm{
+        padding: 5px 15px;
+        margin: 0;
+        font-size: 16px;
+    }
+
     // Extra buttons
     &--github{
         background: rgba(110, 66, 193, 1);
