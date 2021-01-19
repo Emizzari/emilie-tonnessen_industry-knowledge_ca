@@ -5,6 +5,10 @@
     font-weight: 600;
     transition: .2s ease-in-out;
 
+    & i{
+        margin: 0 5px;
+    }
+
     // Colors:
     &--primary{
         background: colors(primary);
@@ -57,7 +61,7 @@
     }
 
     &--sm{
-        padding: 5px 15px;
+        padding: 10px 15px;
         margin: 0;
         font-size: 16px;
     }
