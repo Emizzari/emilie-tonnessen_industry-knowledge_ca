@@ -51,6 +51,7 @@ a{
 .body--tertiary{
     background: colors(tertiary);
     color: #FFF;
+    z-index: -999;
 }
 
 .container{
@@ -73,6 +74,7 @@ a{
 
     &--tertiary{
         background: colors(tertiary);
+        color: white;
     }
 
     //Headlines
