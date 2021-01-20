@@ -771,6 +771,7 @@ a {
   color: #c90000;
   font-weight: 600;
   font-size: 14px;
+  display: none;
 }
 
 .portfolio {
@@ -1264,5 +1265,33 @@ a {
 
 .project__icon--dark-light {
   background: #FFF;
+}
+
+.feedback {
+  width: 100%;
+}
+
+.feedback--success {
+  background: #add8ad;
+  text-align: center;
+  padding: 15px;
+}
+
+.feedback--error {
+  background: #c90000;
+  color: white;
+  font-weight: 500;
+  margin: 0px 0 20px 0;
+  text-align: center;
+  padding: 15px;
+}
+
+.feedback--warning {
+  background: #cc7818;
+  color: white;
+  font-weight: 500;
+  margin: 20px 0 20px 0;
+  text-align: center;
+  padding: 15px;
 }
 /*# sourceMappingURL=style.css.map */
