@@ -155,37 +155,85 @@ export function creatProjectDetails(detail){
 
 
     // Logo:
-    //console.log(detail.logo[i].name);
-
-    const logoDescriptionContainer = document.querySelector(".project__logo__description__p");
-    const logoHorizontalContainer = document.querySelector(".project__logo__horizontal");
-
+    const logoDescriptionContainer = document.querySelector(".project__logo__description");
+    const logoContainer = document.querySelector(".project__logo__image__container");
 
     logoDescriptionContainer.innerHTML = detail.logoDescription;
-    //const logoName = detail.logo[i].name;
 
-    //console.log(logoName);
+    detail.logo.forEach(function (logo){       
+        logoContainer.innerHTML += `
+            <img src="${logo.url}" alt="${logo.alternativeText}" class="project__logo__image">
+        `;
+    });
+
+
+    // Icon
+    const iconContainer = document.querySelector(".project__icon");
+    const brandIcons = detail.brandIcon;
+
+
+
+/*     console.log(detail.brandIcon.length);
+    console.log(brandIcons[i].name);
+
+    brandIcons.forEach(function(icon){
+        console.log(icon.name)
+        console.log(icon.url)
+
+        iconContainer.innerHTML += `<div class="project__icon__box project__icon--light--bg col-6">`;
+
+            
+        if (icon.name === "Primary Brand Icon"){
+            iconContainer.innerHTML = `<img src="${icon.url}" alt="${icon.alternativeText}">`;
+        }
+
+        iconContainer.innerHTML += `</div><div class="project__icon__box project__icon--dark-bg col-6"> `;
+
+        if (icon.name === "Primary Brand Icon"){
+            iconContainer.innerHTML = `<img src="${icon.url}" alt="${icon.alternativeText}">`;
+        }
+
+        iconContainer.innerHTML += `</div><div class="project__icon__box project__icon--dark-bg col-6">
+            
+            </div>
+
+            <div class="project__icon__box project__icon--light--bg col-6">
+            
+            </div>
+        `;
+        
+    }); */
 
     
 
+/*     if (brandIcons.length  === 3){
+        console.log("There is 4 icons")
+        iconContainer.innerHTML += `
+            <div class="project__icon__box project__icon--light--bg col-6"> ` 
+            
+            if (detail.brandIcon.name === "Primary Brand Icon"){
+                `<p> ${detail.brandIcon}"</p>`
+            }
 
+            +
+               
+            `</div>
 
-     detail.logo.forEach(function (logo){
-        console.log(logo);
+            <div class="project__icon__box project__icon--dark-bg col-6">
+            
+            </div>
 
-        
-        logoHorizontalContainer.innerHTML += `
-            <img src="${logo.url}" alt="${logo.alternativeText} class="project__logo__image">
-            <p class="project__logo__image-text">
-                ${logo.name}
-            </p>
+            <div class="project__icon__box project__icon--dark-bg col-6">
+            
+            </div>
+
+            <div class="project__icon__box project__icon--light--bg col-6">
+            
+            </div>
         `;
-        
 
-        
-    });
 
+    } else{
+        console.log("cant find icon..")
+    } */
 }
-
-
-
