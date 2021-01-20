@@ -1,11 +1,10 @@
 <?php
-    $firstName = $_POST['first-name'];
-    $lastName = $_POST['last-name'];
+    $name = $_POST['name'];
     $topic = $_POST['topic'];
     $email = $_POST['email'];
     $messages = $_POST['message'];
 
-    $message = "<p><strong>Navn: </strong> $firstName $lastName</p>";
+    $message = "<p><strong>Navn: </strong> $name </p>";
     $message .= "<p><strong>Email: </strong> $email</p>" . "<br>";
     $message .= "<p><strong>Melding: </strong>" . "<br>" . "$messages</p>";
     
@@ -18,5 +17,5 @@
     // send email
     mail($to, $subject, $message, $mailheader);
 
-    header("Location: https://www.tonnessen.com/contact.html?mail-sent");
+    header("Location: https://www.tonnessen.com/noroff/feu/industry-knowledge/contact.html?mail-sent");
 ?>
