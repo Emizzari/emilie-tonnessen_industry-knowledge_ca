@@ -1222,8 +1222,13 @@ a {
   font-size: clamp(16px, 5vw, 25px);
 }
 
-.project__logo__images img {
+.project__logo__image {
   width: 100%;
+}
+
+.project__logo__image__container {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .project__logo__image-text {
@@ -1231,5 +1236,33 @@ a {
   background: #d4d4d4;
   padding: 5px 10px;
   margin-top: 10px;
+}
+
+.project__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.project__icon__box {
+  width: 50%;
+  padding-top: 50%;
+  position: relative;
+}
+
+.project__icon__box img {
+  width: 50%;
+}
+
+.project__icon--dark-bg {
+  background: #1A1A1A;
+}
+
+.project__icon--dark-light {
+  background: #FFF;
 }
 /*# sourceMappingURL=style.css.map */
