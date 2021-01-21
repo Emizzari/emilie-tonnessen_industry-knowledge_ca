@@ -2,8 +2,7 @@ import { name, nameError, email, emailError, topic, topicError, message, message
 import displayMessage from "../messages/displayMessage.js";
 
 // Function to validate the contact form
-export function formValidation() {
-
+export function formValidation(event) {
     let nameHasError;
     let emailHasError;
     let topicHasError;
