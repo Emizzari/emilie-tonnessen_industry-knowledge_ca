@@ -21,6 +21,7 @@ export function formValidation() {
         nameHasError = true;
     }
 
+
     // Email
     const emailValue = email.value;
 
@@ -31,6 +32,7 @@ export function formValidation() {
         emailError.style.display = "block";
         emailHasError = true;
     }
+
 
     // Topic
     const topicValue = topic.value;
@@ -43,6 +45,7 @@ export function formValidation() {
         topicHasError = true;
     }
 
+    
     // Message
     const messageValue = message.value;
 
@@ -62,8 +65,6 @@ export function formValidation() {
         messageHasError === true){
         return false;
     } else {
-        
-
         return true;
     }
 }
