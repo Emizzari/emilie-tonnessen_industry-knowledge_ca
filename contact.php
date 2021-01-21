@@ -1,6 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    $message_sent = false;
 
+    if(isset($_POST['email']) && $_POST['email'] != ''){
+
+        if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
+            $userName = $_POST['name'];
+            $userEmail = $_POST['email'];
+            $topic = $_POST['topic'];
+            $message = $_POST['message'];
+
+            $to = "emilie@tonnessen.com";
+            $subject = "$topic \r\n";
+            $body = "";
+
+            $body .= "<div><strong>From: </strong>" .$userName. "</div>";
+            $body .= "<div><strong>Email: </strong>".$userEmail. "</div>";
+            $body .= "<div><strong>Message:</strong></div><p>".$message. "</p>";
+
+            $mailheader = "Fra: $email \r\n";
+            $mailheader .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        }
+
+        mail($to, $subject, $body, $mailheader);
+
+        $message_sent = true;
+    }
+?>
+
+<html lang="en">
 <head>
     <!-- Technical: -->
     <meta charset="UTF-8">
@@ -30,7 +57,6 @@
     <!-- Page Title: -->
     <title>Emilie Tonnessen | Contact</title>
 </head>
-
 <body>
     <!-- Wrapper: -->
     <div class="wrapper">
@@ -91,17 +117,23 @@
                     </div>
 
                     <!-- Contact Form: -->
-                    <form  action="https://www.tonnessen.com/noroff/feu/industry-knowledge/contact.php" method="post"  id="contact-form" class="col-6 row contact-form">
+                    <form method="post" action="./contact.php"  id="contact-form" class="col-6 row contact-form">
 
                         <!-- Feedback: -->
-                        <div class="feedback"></div>
+                        <div class="feedback">
+                            <?php
+                                if($message_sent){
+                                    echo("<div class='feedback--success'>Thank you for contacting me, I will reach back to you as soon as possible!</div>");
+                                } else{
+                                    echo("<div class='feedback--error'>Something went wrong. and the mail was not sent. Please try again!</div>");
+                                }
+                            ?>
+                        </div>
 
                         <!-- Name: -->
                         <section class="col-12 contact-form__section">
                             <label for="name" class="contact-form__label">Name: </label>
                             <input name="name" id="name" class="contact-form__input" type="text">
-
-
                             <div class="contact-form__error contact-form__error--name">
                                 <i class="fal fa-exclamation-triangle"></i> Please enter your name
                             </div>
@@ -160,5 +192,4 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
