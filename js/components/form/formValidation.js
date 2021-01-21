@@ -1,5 +1,4 @@
 import { name, nameError, email, emailError, topic, topicError, message, messageError } from "./formVariables.js";
-import displayMessage from "../messages/displayMessage.js";
 
 // Function to validate the contact form
 export function formValidation(event) {
