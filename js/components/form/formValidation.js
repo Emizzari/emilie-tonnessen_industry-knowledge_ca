@@ -63,6 +63,7 @@ export function formValidation() {
         emailHasError === true || 
         topicHasError === true ||
         messageHasError === true){
+        event.preventDefault();
         return false;
     } else {
         return true;
