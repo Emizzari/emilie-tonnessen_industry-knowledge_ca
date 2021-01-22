@@ -1,15 +1,18 @@
 .nav{
-    z-index: 99;
-    position: relative;
+    ////z-index: 99;
+    //position: relative;
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: clamp(50px, 5vw, 100px);
+    overflow: hidden;
 
-    &__container{
-        position: relative;
+
+    @media (max-width: 576px) {
+        padding: 12px;
     }
 
+    // Brand & Logo
     &__brand{
-        z-index: 1;
+        //z-index: 1;
         position: relative;
         color: colors(primary);
         text-transform: uppercase;
@@ -17,47 +20,51 @@
         font-weight: 700;
         font-style: normal;
         text-decoration: none;
-        font-size: 100px; 
+        font-size: clamp(30px, 5vw, 100px); 
+        //padding: 12px 0;
 
-            &:hover{
-                color: colors(primary);
-            }
+        &:hover, &:active{
+            color: colors(secondary);
+        }
 
         &--landingpage{
-            font-size: 200px; 
+            font-size: clamp(30px, 5vw, 200px); 
             color: white;
 
             &:hover{
                 color: white;
             }
+
+            
         }
         
         &__first-name{
-            position: absolute;
-            line-height: 100px;
+            //position: absolute;
+            line-height: clamp(30px, 5vw, 100px);
 
             &--landingpage{
                 position: absolute;
-                line-height: 200px;
+                line-height: clamp(30px, 5vw, 200px);
             }
             
         }
 
         &__last-name{
-            position: absolute;
-            line-height: 100px;
-            background: -webkit-linear-gradient( colors(primary), #FFF);
+            //position: absolute;
+            line-height: clamp(30px, 5vw, 100px);
+            margin-left: 20px;
+            background: -webkit-linear-gradient( colors(primary), transparent);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            top: 90px;
-            left: 60px;
+            //top: 90px;
+            //left: 60px;
 
             &--landingpage{
                 position: absolute;
-                top: 100px;
+                top: clamp(20px, 5vw, 100px);
                 left: 60px;
-                line-height: 200px;
+                line-height: clamp(30px, 5vw, 200px);
                 top: 200px;
                 background: -webkit-linear-gradient(#FFF, colors(primary));
                 background-clip: text;
@@ -67,49 +74,77 @@
         }
     }
 
-    &__list{
-        display: flex;
-        justify-content: flex-end;
-        color: white;
-        list-style: none;
-        line-height: 10vh;
+    // Menu
+    &__menu{
+        //display: none;
 
-        &--dark{
-            color: colors(tertiary);
-        }
-    }
-
-    &__link{
-        z-index: 9999;
-        color: white;
-        text-decoration: none;
-        margin-left: 60px;
         text-transform: uppercase;
-        font-family: fieldwork-hum, sans-serif;
-        font-weight: 600;
-        font-style: normal;
-        line-height: 10vh;
-        transition: .2s ease-in-out;
+        //overflow: hidden;
 
-        &:hover{
-            color: colors(secondary);
+        @media (max-width: 576px){
+            background: rgba(26, 26, 26, 0.95);
+            height: 100vh;
+            width: 200px;
+            position: absolute;
+            top: 0;
+            right: -200px;
+            //z-index: 9999;
+            
         }
 
-        &--dark{
-            color: colors(tertiary);
-
-            &:hover{
-                color: colors(primary);
+        &__container{
+            //display: none;
+            
+            @media (max-width: 576px){
+                padding: 0;
             }
         }
 
-        &--active{
-            color: colors(primary);
+        &__list{
+            display: flex;
+            justify-content: flex-end;
+            color: white;
+            list-style: none;
+            line-height: 10vh;
+
+            @media (max-width: 576px){
+                margin-top: 60px;
+                flex-direction: column;
+                line-height: 10vh;
+            }
+
+            & li{
+                width: 100%;
+                text-align: center;
+            }
+
+            &__link{
+                color: white;
+                text-align: center;
+
+                @media (max-width: 576px){
+                    padding:0 20px;
+                    width: 100%;
+                }
+            }
+            
         }
+
+        
+        &--dark{
+            color: colors(tertiary);
+        }
+
+        
     }
 
+    // Decoration
     &__decor{
         position: relative;
+
+        @media (max-width: 576px) { 
+            display: none;
+        }
 
         & div{
             width: 500px;
@@ -126,4 +161,17 @@
             border-right: 1px solid rgba(0, 0, 0, 0.5);
         }
     }
+
+
 }
+
+
+@media (max-width: 991px) {
+    .open-menu{
+        right: 0px;
+    }
+
+    .fixed{
+        position: fixed;
+    }
+}   
