@@ -28,7 +28,7 @@
     <link rel="icon" href="./graphics/logo-icon.png" type="image/gif" sizes="16x16">
 
     <!-- Page Title: -->
-    <title>Frontend Dev Emilie Tonnessen</title>
+    <title>Emilie Tonnessen | About</title>
 </head>
 
 <body>
@@ -73,12 +73,15 @@
             </div>
         </nav>
 
+
+
+
         <main class="main">
-            <div class="container">
+            <div class="container about__container">
                 <div class="row">
 
                     <!-- Description -->
-                    <div class="col-6 about__desc">
+                    <div class="col-sm-12 col-lg-6 about__desc">
                         <h2 class="about__headline">
                             a tiny bit about me
                         </h2>
@@ -110,60 +113,38 @@
                     </div>
 
                     <!-- Picture & Buttons -->
-                    <div class="col-6 about__profile">
+                    <div class="col-sm-12 col-lg-6 about__profile">
                         <div class="row">
+
+                            <!-- Image: -->
                             <div class="col-12 profile-img"></div>
 
+                            <!-- Buttons -->
                             <div class="col-12 about__buttons">
                                 <a href="./files/Resume.pdf" download>
-                                    <button class="btn btn--tertiary btn--lg">
+                                    <button class="btn btn--tertiary btn--md">
                                         Resume
                                         <i class="fas fa-file-download"></i>
                                     </button>
                                 </a>
-                                <a href="https://github.com/Emizzari?tab=repositories">
-                                    <button class="btn btn--github btn--lg">
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Emizzari?tab=repositories">
+                                    <button class="btn btn--github btn--md">
                                         GitHub
                                         <i class="fab fa-github"></i>
                                     </button>
                                 </a>
-                                <a href="https://www.linkedin.com/in/emilie-henriette-t%C3%B8nnessen-19a850191/">
-                                    <button class="btn btn--linkedin btn--lg">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/emilie-henriette-t%C3%B8nnessen-19a850191/">
+                                    <button class="btn btn--linkedin btn--md">
                                         Linkedin
                                         <i class="fab fa-linkedin"></i>
                                     </button>
                                 </a>
                             </div>
                         </div>
-                        
                     </div>
-
-                    
                 </div>
             </div>
-
-
-
-
-
-
-
         </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
     <!-- Skills -->
@@ -191,7 +172,8 @@
     </footer>
 
     <!-- JavaScript: -->
-    <script src="" type="modules"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/about.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
