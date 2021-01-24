@@ -62,12 +62,37 @@
         padding: 10px 35px;
         margin: 0;
         font-size: 20px;
+
+        @media (max-width: 991px){
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        @media (min-width: 992px) and (max-width:1399px){
+            padding: 10px 20px;
+            font-size: 15px;
+        }
+
+        @media (min-width: 1400px){
+            padding: 15px 40px;
+            font-size: 18px;
+        }
     }
 
     &--sm{
         padding: 10px 15px;
         margin: 0;
         font-size: 16px;
+
+        @media (max-width: 576px){
+            padding: 8px 5px;
+            font-size: 10px;
+        }
+
+        @media (min-width: 992px){
+            padding: 8px 6px;
+            font-size: 11px;
+        }
     }
 
     // Extra buttons
@@ -80,8 +105,6 @@
             color: #FFF;
         }
     }
-
-    
 
     &--linkedin{
         background: rgba(14, 119, 168, 1);

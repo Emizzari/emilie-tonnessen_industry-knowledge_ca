@@ -1,4 +1,9 @@
 .header{
+    margin-top: 50px;
+
+    @media (min-width: 1400px){
+        margin-top: 110px;
+    }
     
     &--bg{
         background: rgba(49, 49, 49, 0.5);
