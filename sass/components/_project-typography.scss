@@ -17,11 +17,14 @@
         padding: 50px;
         padding-right: 0;
         
+        @media (max-width: 576px) {
+            padding: 15px;
+        }
     }
 
     &__title{
         text-transform: uppercase;
-        font-size: clamp(40px, 50vw, 150px);
+        font-size: clamp(40px, 12vw, 150px);
         text-align: center;
         background: -webkit-linear-gradient( colors(secondary), colors(tertiary));
             background-clip: text;
@@ -33,9 +36,15 @@
         margin: 50px 0;
         z-index: 2;
 
+        @media (max-width: 576px) {
+            margin: 30px 0;
+        }
+
         &--last-child{
             margin-bottom: 0;
         }
+
+        
     }
 
     &--p p{
@@ -53,11 +62,14 @@
         color: white;
         margin: 20px 0;
         text-align: right;
-        font-size: 30px;
+        font-size: clamp(20px, 5vw, 30px);
         font-weight: 600;
-        padding-left: 50px;
         padding-bottom: 5px;
         transition: .2s ease;
+
+        @media (max-width: 576px) {
+
+        }
 
         &:hover{
             color: colors(secondary);
@@ -70,9 +82,13 @@
             flex-direction: column;
             border-top: 1px solid white;
             border-right: 1px solid white;
-            height: 700px;
+            height: clamp(500px, 5vh, 700px);
             padding: 50px;
             padding-left: 0;
+
+            @media (max-width: 576px) {
+                padding: 15px;
+            }
 
             & div{
                 text-align: right;
